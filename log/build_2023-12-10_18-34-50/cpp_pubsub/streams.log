@@ -1,0 +1,46 @@
+[0.064s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
+[0.089s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.240s] -- Found rclcpp: 21.0.3 (/opt/ros/iron/share/rclcpp/cmake)
+[0.324s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.347s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.385s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.418s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.639s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[0.646s] -- Found rmw_fastrtps_cpp: 7.1.1 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[0.795s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.828s] -- Found FastRTPS: /opt/ros/iron/include  
+[0.874s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.101s] -- Found std_msgs: 5.0.0 (/opt/ros/iron/share/std_msgs/cmake)
+[1.207s] -- Configuring done
+[1.226s] -- Generating done
+[1.229s] -- Build files have been written to: /home/rti/1_Projects/ros2_ws/build/cpp_pubsub
+[1.271s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[1.271s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[6.822s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[7.154s] [ 75%] Built target talker
+[9.588s] [100%] [32m[1mLinking CXX executable listener[0m
+[9.978s] [100%] Built target listener
+[9.996s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
+[10.040s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/rti/1_Projects/ros2_ws/build/cpp_pubsub
+[10.048s] -- Install configuration: ""
+[10.049s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[10.050s] -- Set runtime path of "/home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[10.051s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[10.051s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener
+[10.059s] -- Set runtime path of "/home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[10.060s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[10.060s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[10.061s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[10.063s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[10.064s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[10.065s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[10.066s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[10.067s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[10.068s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[10.071s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[10.074s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[10.075s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[10.077s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[10.078s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[10.080s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[10.081s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/rti/1_Projects/ros2_ws/build/cpp_pubsub

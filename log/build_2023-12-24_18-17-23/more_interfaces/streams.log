@@ -1,0 +1,20 @@
+[0.117s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/more_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/rti/1_Projects/ros2_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/rti/1_Projects/ros2_ws/install/more_interfaces
+[0.130s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.421s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.427s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.505s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.542s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.547s] -- Found rclcpp: 21.0.4 (/opt/ros/iron/share/rclcpp/cmake)
+[0.828s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[0.830s] -- Found rmw_fastrtps_cpp: 7.1.2 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.064s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.376s] [31mCMake Error at /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_get_typesupport_target.cmake:29 (message):
+[1.376s]   more_interfaces is not a CMake target.  Maybe rosidl_generate_interfaces
+[1.377s]   was given a different target name?
+[1.377s] Call Stack (most recent call first):
+[1.378s]   CMakeLists.txt:27 (rosidl_get_typesupport_target)
+[1.378s] 
+[1.379s] [0m
+[1.379s] -- Configuring incomplete, errors occurred!
+[1.380s] See also "/home/rti/1_Projects/ros2_ws/build/more_interfaces/CMakeFiles/CMakeOutput.log".
+[1.383s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/more_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/rti/1_Projects/ros2_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/rti/1_Projects/ros2_ws/install/more_interfaces

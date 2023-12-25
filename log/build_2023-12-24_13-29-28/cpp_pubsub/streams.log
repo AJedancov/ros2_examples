@@ -1,0 +1,33 @@
+[0.075s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
+[0.130s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.131s] [35m[1mConsolidate compiler generated dependencies of target listener[0m
+[0.152s] [ 25%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[0.165s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[6.623s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[6.965s] [ 75%] Built target talker
+[9.658s] [100%] [32m[1mLinking CXX executable listener[0m
+[10.011s] [100%] Built target listener
+[10.027s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
+[10.071s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --install /home/rti/1_Projects/ros2_ws/build/cpp_pubsub
+[10.081s] -- Install configuration: ""
+[10.082s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[10.082s] -- Set runtime path of "/home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[10.083s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[10.090s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener
+[10.093s] -- Set runtime path of "/home/rti/1_Projects/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[10.093s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[10.093s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[10.093s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[10.093s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[10.094s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[10.094s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[10.094s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[10.095s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[10.095s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[10.095s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[10.095s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[10.095s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[10.096s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[10.096s] -- Up-to-date: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[10.096s] -- Installing: /home/rti/1_Projects/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[10.099s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --install /home/rti/1_Projects/ros2_ws/build/cpp_pubsub

@@ -1,0 +1,18 @@
+[0.081s] Invoking command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
+[0.149s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[0.150s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[0.502s] [01m[K/home/rti/1_Projects/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:24:10:[m[K [01;31m[Kfatal error: [m[Ktutorial_interfaces/msg/Num.msg: No such file or directory
+[0.502s]    24 | #include [01;31m[K"tutorial_interfaces/msg/Num.msg"[m[K // from Tutorial about Interfaces
+[0.502s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.503s] compilation terminated.
+[0.505s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[0.505s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/talker.dir/all] Error 2
+[0.505s] gmake[1]: *** Waiting for unfinished jobs....
+[0.532s] [01m[K/home/rti/1_Projects/ros2_ws/src/cpp_pubsub/src/subscriber_member_function.cpp:20:10:[m[K [01;31m[Kfatal error: [m[Ktutorial_interfaces/msg/Num.msg: No such file or directory
+[0.532s]    20 | #include [01;31m[K"tutorial_interfaces/msg/Num.msg"[m[K // from Tutorial about Interfaces
+[0.533s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.533s] compilation terminated.
+[0.537s] gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o] Error 1
+[0.537s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/listener.dir/all] Error 2
+[0.538s] gmake: *** [Makefile:146: all] Error 2
+[0.541s] Invoked command in '/home/rti/1_Projects/ros2_ws/build/cpp_pubsub' returned '2': CMAKE_PREFIX_PATH=/home/rti/1_Projects/ros2_ws/install/tutorial_interfaces:/home/rti/1_Projects/ros2_ws/install/cpp_pubsub:/home/rti/1_Projects/ros2_ws/install/cpp_srvcli:/opt/ros/iron /usr/bin/cmake --build /home/rti/1_Projects/ros2_ws/build/cpp_pubsub -- -j2 -l2
