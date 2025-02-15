@@ -11,9 +11,9 @@
 
 using namespace std::chrono_literals; // to crate 3s
 
-static constexpr char const *talker_node = "lc_talker";
-static constexpr char const *get_state_service = "lc_talker/get_state";
-static constexpr char const *change_state_service = "lc_talker/change_state";
+static constexpr char const *talker_node = "lc_publisher";
+static constexpr char const *get_state_service = "lc_publisher/get_state";
+static constexpr char const *change_state_service = "lc_publisher/change_state";
 
 
 class StateManager: public rclcpp::Node{
