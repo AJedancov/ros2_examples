@@ -3,6 +3,8 @@
 #include "std_msgs/msg/string.hpp"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
 
+using namespace std::chrono_literals;
+
 class LifecycleTalker : public rclcpp_lifecycle::LifecycleNode
 {
 public:
@@ -22,7 +24,7 @@ public:
 
     using namespace std::chrono_literals; // to crate 1s
     timer = this->create_wall_timer(
-        std::chrono::milliseconds(1000),
+        500ms,
         std::bind(&LifecycleTalker::publish_message, this));
 
     RCLCPP_INFO(get_logger(), "on_configure() called");
@@ -62,8 +64,9 @@ private:
     msg->data = "Hello";
 
     if (!publisher->is_activated()){
-      RCLCPP_INFO(get_logger(), "Lifecycle publisher currently inactive");
+      RCLCPP_WARN(get_logger(), "Publisher inactive");
     }else{
+      RCLCPP_INFO(get_logger(), "Publisch message: %s", msg->data.c_str());
       publisher->publish(std::move(msg));
     }
   }
@@ -72,13 +75,12 @@ private:
 int main(int argc, char **argv){
 
   rclcpp::init(argc, argv);
+  
+  auto node = std::make_shared<LifecycleTalker>("lc_publisher");
+
   rclcpp::executors::SingleThreadedExecutor executor;
-
-  auto lc_talker_node = std::make_shared<LifecycleTalker>("lc_talker");
-
-  executor.add_node(lc_talker_node->get_node_base_interface());
-  executor.spin(); // same as rclcpp::spin but for lc nodes
-
+  executor.add_node(node->get_node_base_interface());
+  executor.spin();
   rclcpp::shutdown();
 
   return 0;
