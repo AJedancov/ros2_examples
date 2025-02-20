@@ -5,30 +5,38 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(pluginlib REQUIRED)
+find_package(ament_cmake REQUIRED) 
 
-add_executable(area_node src/area_node.cpp)
-target_include_directories(area_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+# Create an interface library (no source files, only header)
+add_library(base_classes INTERFACE)
 
+# Specify the include directory for the interface library
+target_include_directories(base_classes INTERFACE
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>"
+)
 
-target_compile_features(area_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-
-ament_target_dependencies(
-  area_node
-  pluginlib)
+# Install the interface library
+install(TARGETS base_classes
+  EXPORT base_classes
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
 
 install(
+  # Install the entire include/ directory, which contains header files
   DIRECTORY include/
-  DESTINATION include/${PROJECT_NAME})
+  
+  # Specify that the include/ directory should be installed
+  # under the include directory of the installation prefix:
+  # install/${PROJECT_NAME}/include/${PROJECT_NAME}          
+  DESTINATION include/${PROJECT_NAME}
+)
 
-install(
-  TARGETS area_node
-  DESTINATION lib/${PROJECT_NAME})
+ament_export_targets(base_classes HAS_LIBRARY_TARGET)
+ament_export_include_directories(include/${PROJECT_NAME})
 
-ament_export_include_directories(include)
+# ament_export_libraries(base_classes)
 
 ament_package()

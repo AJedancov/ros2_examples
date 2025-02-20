@@ -1,20 +1,20 @@
 #ifndef POLYGON_BASE_REGULAR_POLYGON_HPP
 #define POLYGON_BASE_REGULAR_POLYGON_HPP
 
-namespace polygon_base{
+namespace base_classes{
 
-  class RegularPolygon{
+  class PolygonBase{
   public:
     virtual void initialize(double side_length) = 0;
     virtual double area() = 0;
-    virtual ~RegularPolygon(){}
+    virtual ~PolygonBase(){}
 
   protected:
   // A constructor without parameters is required, 
   // so if any parameters to the class are needed, 
   // we use the initialize method to pass them to the object.
-    RegularPolygon(){}
+    PolygonBase(){}
   };
-}  // namespace polygon_base
+}  // namespace base_class
 
 #endif  // POLYGON_BASE_REGULAR_POLYGON_HPP
