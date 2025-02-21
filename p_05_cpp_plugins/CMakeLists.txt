@@ -1,52 +1,51 @@
 cmake_minimum_required(VERSION 3.8)
-project(p_05_cpp_polygon_plugins)
+project(p_05_cpp_plugins)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 # find dependencies
-find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(p_04_cpp_base_class_for_plugins REQUIRED)
 
-pluginlib_export_plugin_description_file(p_05_cpp_plugins plugins.xml)
+add_library(square_plugin SHARED
+  src/plugins/square_plugin.cpp
+  # src/plugins/triangle_plugin.cpp
+)
 
-add_library(polygon_plugins src/polygon_plugins.cpp)
-add_library(polygon_plugins::polygon_plugins ALIAS polygon_plugins)
-
-target_include_directories(polygon_plugins PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-
-target_compile_features(polygon_plugins PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-
-
-ament_target_dependencies(
-  polygon_plugins
-  p_04_cpp_base_class_for_plugins
-  pluginlib)
-
-# Causes the visibility macros to use dllexport rather than dllimport,
-# which is appropriate when building the dll but not consuming it.
-target_compile_definitions(polygon_plugins PRIVATE "POLYGON_PLUGINS_BUILDING_LIBRARY")
-
-install(
-  DIRECTORY include/
-  DESTINATION include)
+add_library(triangle_plugin SHARED
+  # src/plugins/square_plugin.cpp
+  src/plugins/triangle_plugin.cpp
+)
 
 
-install(
-  TARGETS polygon_plugins
-  EXPORT export_${PROJECT_NAME}
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+ament_target_dependencies(square_plugin PUBLIC pluginlib p_04_cpp_base_class_for_plugins)
+ament_target_dependencies(triangle_plugin PUBLIC pluginlib p_04_cpp_base_class_for_plugins)
 
-ament_export_include_directories(include)
-ament_export_libraries(polygon_plugins)
-ament_export_targets(export_${PROJECT_NAME})
 
+target_compile_features(square_plugin PUBLIC cxx_std_17)  # Require C++17
+target_compile_features(triangle_plugin PUBLIC cxx_std_17)  # Require C++17
+
+pluginlib_export_plugin_description_file(p_04_cpp_base_class_for_plugins plugins.xml)
+
+
+
+add_executable(area_node src/area_node.cpp)
+
+ament_target_dependencies(area_node pluginlib rclcpp p_04_cpp_base_class_for_plugins)
+# target_link_libraries(area_node PUBLIC
+#   pluginlib::pluginlib
+#   rclcpp::rclcpp
+#   p_04_cpp_base_class_for_plugins::base_classes
+#   square_plugin
+#   triangle_plugin
+# )
+
+install(TARGETS area_node square_plugin triangle_plugin
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

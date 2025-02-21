@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>p_05_cpp_polygon_plugins</name>
+  <name>p_05_cpp_plugins</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="123@gmail.com">azh</maintainer>
@@ -9,7 +9,7 @@
 
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
 
-  <depend>polygon_base</depend>
+  <depend>p_04_cpp_base_class_for_plugins</depend>
   <depend>pluginlib</depend>
 
   <test_depend>ament_lint_auto</test_depend>
@@ -17,5 +17,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+    <p_05_cpp_plugins plugin="$(prefix)/plugins.xml"/>
   </export>
 </package>
